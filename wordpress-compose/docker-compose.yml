@@ -27,8 +27,8 @@ reverse-proxy:
 web:
   image: php:7.2.2-apache
   container_name: php_web
-#  depends_on:
-#    - mariadb:mysql
+  links:
+    - mariadb
   volumes:
     - ./php/:/var/www/html/
   ports:
