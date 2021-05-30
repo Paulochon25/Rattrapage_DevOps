@@ -6,7 +6,7 @@ wordpress:
     - WORDPRESS_DB_PASSWORD=secret
     - WORDPRESS_DB_USER=root
   ports:
-    - 80:80
+    - 86:86
   volumes:
     - ./html:/var/www/html:cached
 mariadb:
@@ -23,3 +23,4 @@ reverse-proxy:
     - ./nginx.conf/default.conf:/etc/nginx/conf.d/default.conf
   ports:
     - "8080:88"
+
